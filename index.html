@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8" />
     <title>Gift Coupon</title>
@@ -25,7 +25,7 @@
 
         .card {
             background: #f7d86a;
-            aspect-ratio: 2 / 1;          /* 21 x 10.5 */
+            aspect-ratio: 2 / 1; /* 21 x 10.5 */
             width: min(90vw, 900px);
             border: 1px solid rgba(0, 0, 0, 0.05);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -56,6 +56,7 @@
             line-height: 1.5;
         }
 
+        /* лінія + емодзі-бантик */
         .line-block {
             position: absolute;
             left: 8%;
@@ -64,6 +65,12 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
+        }
+
+        .bow-emoji {
+            font-size: 1.6rem;
+            line-height: 1;
+            transform: translateY(2px);
         }
 
         .line {
@@ -106,9 +113,51 @@
             top: 7px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
+            body {
+                align-items: flex-start;
+            }
+
+            .card {
+                width: 100vw;
+                max-width: 100%;
+                aspect-ratio: auto;         /* высота по контенту */
+                border-radius: 0;
+                padding: 10% 8% 12%;
+                box-shadow: none;
+            }
+
+            .content,
+            .line-block,
+            .heart-wrapper {
+                position: static;           /* выключаем absolute */
+                transform: none;
+                width: 100%;
+            }
+
+            .content {
+                text-align: center;
+                margin-bottom: 2.5rem;
+            }
+
+            .caption {
+                font-size: 0.75rem;
+                margin-bottom: 0.8rem;
+            }
+
             .details {
                 font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .line-block {
+                margin: 2.5rem 0 2rem;
+            }
+
+            .heart-wrapper {
+                width: 28px;
+                height: 24px;
+                margin: 0 auto;
             }
         }
     </style>
@@ -118,7 +167,8 @@
     <div class="content">
         <p class="caption">GIFT CERTIFICATE</p>
         <p class="details">
-            Цей сертифікат дарує тобі один романтичний вікенд у готелі з джакузі в номері — тільки для нас двох. Дати, місто й готель ти обираєш сама, а я беру на себе всі бронювання, дорогу й приємні сюрпризи. Просто скажи, коли захочеш зануритися в теплу піну, відпочити від усього світу й побути разом. 💛
+            Цей сертифікат дарує тобі один романтичний вікенд у готелі з джакузі в номері — тільки для нас двох.
+            Дати, місто й готель ти обираєш сама, а я беру на себе всі бронювання, дорогу й приємні сюрпризи. 💛
         </p>
     </div>
 
