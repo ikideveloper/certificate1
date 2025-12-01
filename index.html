@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Gift Coupon</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap"
+          rel="stylesheet">
 
     <style>
         * {
@@ -21,14 +22,15 @@
             justify-content: center;
             background: #f0f0f0;
             font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            padding: 16px;
         }
 
         .card {
             background: #f7d86a;
-            aspect-ratio: 2 / 1; /* 21 x 10.5 */
+            aspect-ratio: 2 / 1;
             width: min(90vw, 900px);
             border: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
             position: relative;
             padding: 5% 8%;
             overflow: hidden;
@@ -56,7 +58,6 @@
             line-height: 1.5;
         }
 
-        /* лінія + емодзі-бантик */
         .line-block {
             position: absolute;
             left: 8%;
@@ -105,7 +106,7 @@
             border-radius: 50%;
             top: 0;
             left: 7px;
-            box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
         }
 
         .heart::after {
@@ -114,30 +115,22 @@
         }
 
         @media (max-width: 700px) {
-            body {
-                align-items: flex-start;
-            }
-
             .card {
-                width: 100vw;
-                max-width: 100%;
-                aspect-ratio: auto;         /* высота по контенту */
-                border-radius: 0;
-                padding: 10% 8% 12%;
-                box-shadow: none;
+                aspect-ratio: auto;
+                width: min(92vw, 420px);
+                padding: 9% 10% 11%;
             }
 
             .content,
             .line-block,
             .heart-wrapper {
-                position: static;           /* выключаем absolute */
+                position: static;
                 transform: none;
                 width: 100%;
             }
 
             .content {
                 text-align: center;
-                margin-bottom: 2.5rem;
             }
 
             .caption {
@@ -146,12 +139,12 @@
             }
 
             .details {
-                font-size: 1rem;
+                font-size: 0.98rem;
                 line-height: 1.5;
             }
 
             .line-block {
-                margin: 2.5rem 0 2rem;
+                margin: 2.4rem 0 2rem;
             }
 
             .heart-wrapper {
