@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gift Coupon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+            font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .card {
+            background: #f7d86a;
+            aspect-ratio: 2 / 1;          /* 21 x 10.5 */
+            width: min(90vw, 900px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            padding: 5% 8%;
+            overflow: hidden;
+        }
+
+        .content {
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            text-align: center;
+        }
+
+        .caption {
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+        }
+
+        .details {
+            font-family: "Playfair Display", "Times New Roman", serif;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .line-block {
+            position: absolute;
+            left: 8%;
+            right: 8%;
+            bottom: 28%;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .line {
+            flex: 1;
+            height: 1px;
+            background: #000;
+        }
+
+        .heart-wrapper {
+            position: absolute;
+            left: 50%;
+            bottom: 12%;
+            transform: translateX(-50%);
+            width: 28px;
+            height: 24px;
+        }
+
+        .heart {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-45deg);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: #e57373;
+            border-radius: 50%;
+            top: 0;
+            left: 7px;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+        }
+
+        .heart::after {
+            left: 0;
+            top: 7px;
+        }
+
+        @media (max-width: 600px) {
+            .details {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="content">
+        <p class="caption">GIFT CERTIFICATE</p>
+        <p class="details">
+            Цей сертифікат дарує тобі один романтичний вікенд у готелі з джакузі в номері — тільки для нас двох. Дати, місто й готель ти обираєш сама, а я беру на себе всі бронювання, дорогу й приємні сюрпризи. Просто скажи, коли захочеш зануритися в теплу піну, відпочити від усього світу й побути разом. 💛
+        </p>
+    </div>
+
+    <div class="line-block">
+        <div class="line"></div>
+    </div>
+
+    <div class="heart-wrapper">
+        <div class="heart"></div>
+    </div>
+</div>
+</body>
+</html>
